@@ -1,0 +1,24 @@
+div.ouline{
+  float: left;
+  width: 20%;
+  border-style: solid;
+  margin:10px 10px 10px;
+}
+h2
+{
+  color: blue;
+  margin-left: 5px;
+}
+ul{
+  list-style-type: none;
+}
+div.message1{
+  margin: 10px 10px 10px;
+  color: green;
+  font-size: 20px;
+}
+div.message2{
+  margin: 10px 10px 10px;
+  color: red;
+  font-size: 20px;
+}

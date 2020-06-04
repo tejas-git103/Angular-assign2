@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="ShoppingListCheckOff">
+  <head>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 2</title>
+  </head>
+  <body >
+    <div class="ouline" ng-controller="ToBuyController as buy">
+      <div >
+        <h2>ToBuy</h2>
+      </div>
+      <div >
+        <ul>
+          <li ng-repeat="item in buy.list">
+            <input type="radio" ng-click="buy.remove($index);set_flag();">Buy {{item.Quantity}} {{item.Name}}
+          </li>
+        </ul>
+        <div class="message1" ng-if="buy.flag1">
+          Everything is bought
+        </div>
+      </div>
+    </div>
+    <div  class="ouline" ng-controller="AlreadyBoughtController as bought">
+      <div >
+        <h2>Already Bought</h2>
+      </div>
+      <div >
+        <ul>
+          <li ng-repeat="item in bought.list">Bought {{item.Quantity}} {{item.Name}}</li>
+        </ul>
+        <div class="message2" ng-if="(bought.list.length==0)">
+          Nothing bought yet.
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
